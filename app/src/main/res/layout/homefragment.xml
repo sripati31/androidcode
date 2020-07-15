@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:gravity="center">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!--Top Pick for you-->
+            <LinearLayout
+                android:id="@+id/ly_top_pick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_top_pick_for_you"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Top Picks For You"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_treding"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_top_pick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--popular show-->
+            <LinearLayout
+                android:id="@+id/ly_popular_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_show"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular Show"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_show"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular In Drama-->
+            <LinearLayout
+                android:id="@+id/ly_popular_drama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_drama"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Drama"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_drama"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_drama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Reality-->
+            <LinearLayout
+                android:id="@+id/ly_popular_reality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_reality"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Reality"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_reality"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_reality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Romance-->
+            <LinearLayout
+                android:id="@+id/ly_popular_romance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_romance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Romance"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_romance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_romance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Family-->
+            <LinearLayout
+                android:id="@+id/ly_popular_Family"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_Family"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Family"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_Family"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_Family"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Action-->
+            <LinearLayout
+                android:id="@+id/ly_popular_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_action"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Action"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_action"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Crime-->
+            <LinearLayout
+                android:id="@+id/ly_popular_crime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_crime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Crime"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_crime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_crime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Thriller-->
+            <LinearLayout
+                android:id="@+id/ly_popular_thriller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_thriller"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Thriller"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_thriller"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_thriller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Comedy-->
+            <LinearLayout
+                android:id="@+id/ly_popular_comedy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_comedy"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Comedy"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_comedy"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_comedy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Kids-->
+            <LinearLayout
+                android:id="@+id/ly_popular_kids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_kids"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Kids"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_kids"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_kids"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Biopic-->
+            <LinearLayout
+                android:id="@+id/ly_popular_biopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_biopic"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Biopic"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_biopic"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_biopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Documentary-->
+            <LinearLayout
+                android:id="@+id/ly_popular_documentary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_documentary"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Documentary"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_documentary"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_documentary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Teen-->
+            <LinearLayout
+                android:id="@+id/ly_popular_teen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_teen"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Teen"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_teen"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_teen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!--Popular in Talkshow-->
+            <LinearLayout
+                android:id="@+id/ly_popular_talkshow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:weightSum="1.0">
+
+                    <TextView
+                        android:id="@+id/txt_popular_talkshow"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/public_semibold"
+                        android:gravity="center_vertical"
+                        android:text="Popular in Talkshow"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/txt_viewall_popular_talkshow"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:text="View All"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/ic_right_arrow"
+                            android:fontFamily="@font/public_semibold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14dp" />s
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_popular_talkshow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

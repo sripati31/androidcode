@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/ly_annual"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_sub_name"
+                android:layout_width="match_parent"
+                android:text="Annual"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:fontFamily="@font/public_semibold"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txt_sub_price"
+                android:layout_width="match_parent"
+                android:text="$ 999"
+                android:gravity="center"
+                android:textSize="26dp"
+                android:fontFamily="@font/public_semibold"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Non-refundable"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:fontFamily="@font/public_semibold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

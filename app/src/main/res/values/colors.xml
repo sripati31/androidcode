@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#ffbb00</color>
+    <color name="colorAccent">#7d7d7d</color>
+
+    <color name="gray_light">#83e1e1e1</color>
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+    <color name="orange">#fe5824</color>
+
+    <color name="font_dark">#293643</color>
+    <color name="font_light">#acb6c0</color>
+    <color name="font_link">#ff8348</color>
+
+    <color name="text_black">#333333</color>
+
+    <color name="select_dot">#EB0000</color>
+    <color name="unselect_dot">#606060</color>
+
+    <color name="light_blue_400">#29B6F6</color>
+
+    <color name="light_green_300">#AED581</color>
+
+    <color name="overlay_light_10">#1AFFFFFF</color>
+    <color name="overlay_light_20">#33FFFFFF</color>
+    <color name="overlay_light_30">#4DFFFFFF</color>
+    <color name="overlay_light_40">#66FFFFFF</color>
+    <color name="overlay_light_50">#8FFFFFF0</color>
+    <color name="overlay_light_60">#99FFFFFF</color>
+    <color name="overlay_light_70">#B3FFFFFF</color>
+    <color name="overlay_light_80">#CCFFFFFF</color>
+    <color name="overlay_light_90">#E6FFFFFF</color>
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#d9d9d9</color>
+    <color name="bg_screen2">#00a78e</color>
+    <color name="bg_screen3">#fbb034</color>
+    <color name="bg_screen4">#003666</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#d1395c</color>
+    <color name="dot_dark_screen2">#14a895</color>
+    <color name="dot_dark_screen3">#2278d4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+    <color name="dot_light_screen4">#e4b5fc</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+
+    <color name="dot_color">#676767</color>
+    <color name="selected_dot_color">#01346B</color>
+
+    <color name="Title_background">#F3F3F3</color>
+    <color name="Title_text">#01346B</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="green">#71bf45</color>
+    <color name="blue">#003669</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="bg">#001624</color>
+
+    <color name="bg_option">#F7F7F7</color>
+    <color name="bg_nav_selected">#20000000</color>
+
+    <color name="gradient_color_1">#3f5efb</color>
+    <color name="gradient_color_2">#fc466b</color>
+
+    <color name="black">#000000</color>
+    <color name="black80">#80000000</color>
+    <color name="grid_back_color">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_aa">#aa000000</color>
+    <color name="white30">#30ffffff</color>
+    <color name="white80">#80ffffff</color>
+    <color name="rating">#f99120</color>
+    <color name="red">#ff0000</color>
+    <color name="bg_nav_bottom">#053b5b</color>
+    <color name="line_verticle_home">#3957e7</color>
+    <color name="text_view_all">#3957e7</color>
+    <color name="black_30">#30000000</color>
+
+    <color name="text">#424242</color>
+    <color name="text_light">#626262</color>
+
+    <color name="line">#40ffffff</color>
+    <color name="switch_thumb_disable">#ececec</color>
+    <color name="switch_track">#F7F7F7</color>
+    <color name="line_op_vertical">#DBDBDB</color>
+    <color name="black40">#40000000</color>
+
+    <integer-array name="pocket_bar_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+
+    <color name="view_setting">#D7D7D7</color>
+    <color name="textView_setting">#4A4A4A</color>
+</resources>
